@@ -15,6 +15,9 @@
       # Use latest kernel
       boot.kernelPackages = pkgs.linuxPackages_latest;
 
+      # for makemkv
+      boot.kernelModules = [ "sg" ];
+
       # active shell
       programs.zsh.enable = true;
 
