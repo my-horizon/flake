@@ -126,15 +126,19 @@
             margin: 0 3px;
             }
 
+            .modules-right {
+            background-color: #1e1e2e;
+            border-radius: 10px;
+            padding: 2px 8px;
+            }
+
             #cpu,
             #memory,
             #network,
             #pulseaudio {
             color: #cdd6f4;
-            background-color: #1e1e2e;
-            border-radius: 10px;
-            padding: 2px 8px;
-            margin: 0;
+            background-color: transparent;
+            margin: 0 3px;
             }
           '';
         };
