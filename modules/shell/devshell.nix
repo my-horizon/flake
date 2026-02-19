@@ -1,7 +1,13 @@
-{ ... }:
+{ inputs, ... }:
 {
   perSystem =
-    { pkgs, ... }:
+    { pkgs, system, ... }:
+    let
+      unfreePkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    in
     {
       devShells = {
 
@@ -20,8 +26,8 @@
         };
 
         # movie ripping
-        movie = pkgs.mkShell {
-          packages = with pkgs; [
+        movie = unfreePkgs.mkShell {
+          packages = with unfreePkgs; [
             makemkv
             handbrake
             vlc
