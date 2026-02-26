@@ -1,0 +1,54 @@
+* {
+text: #cdd6f4;
+background: #1e1e2e;
+border: #b4befe;
+
+text-color: @text;
+background-color: @background;
+border-color: @border;
+}
+
+window {
+width: 500px;
+border-color: @border;
+border: 3px;
+border-radius: 10px;
+padding: 10px;
+}
+
+inputbar {
+children: [ entry ];
+background-color: @background;
+border-radius: 10px;
+padding: 10px;
+margin: 0 0 10px 0;
+}
+
+prompt {
+text-color: @text;
+background-color: @background;
+border-radius: 10px;
+padding: 10px;
+}
+
+entry {
+placeholder: "Suchen...";
+padding: 10px;
+}
+
+listview {
+lines: 10;
+fixed-height: true;
+spacing: 3px;
+}
+
+element {
+text-color: @text;
+background-color: @background;
+border-radius: 10px;
+padding: 10px;
+}
+
+element selected {
+text-color: @text;
+}
