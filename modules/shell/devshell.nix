@@ -30,7 +30,6 @@
           packages = with unfreePkgs; [
             makemkv
             handbrake
-            vlc
           ];
         };
       };
