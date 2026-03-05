@@ -8,8 +8,8 @@
         networkmanagerapplet
         pwvucontrol
         git
-        unzip
         zip
+        unzip
         cifs-utils
         evince
         kdePackages.okular
@@ -18,6 +18,7 @@
         grim
         slurp
         wl-clipboard
+        vlc
         nerd-fonts.jetbrains-mono
         xwayland
       ];
