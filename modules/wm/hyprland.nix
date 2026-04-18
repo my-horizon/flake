@@ -157,6 +157,8 @@
             exec-once = [
               "waybar"
               "hyprpaper"
+              "[workspace 1 silent] ghostty"
+              "[workspace 2 silent] firefox"
               "hyprctl dispatch workspace 1"
             ];
 
