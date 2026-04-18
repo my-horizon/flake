@@ -1,9 +1,9 @@
 { inputs, ... }:
 {
   flake.nixosModules.firefox =
-    { ... }:
+    { config, ... }:
     {
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         programs.firefox = {
           enable = true;
 

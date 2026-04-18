@@ -1,9 +1,9 @@
 { ... }:
 {
   flake.nixosModules.yazi =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         programs.yazi = {
           enable = true;
           enableZshIntegration = true;

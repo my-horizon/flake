@@ -1,9 +1,9 @@
 { ... }:
 {
   flake.nixosModules.rofi =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         programs.rofi = {
           enable = true;
           terminal = "ghostty";

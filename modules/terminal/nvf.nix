@@ -1,9 +1,9 @@
 { inputs, ... }:
 {
   flake.nixosModules.nvf =
-    { ... }:
+    { config, ... }:
     {
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         imports = [ inputs.nvf.homeManagerModules.default ];
 
         programs.nvf = {

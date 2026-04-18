@@ -1,7 +1,7 @@
 { ... }:
 {
   flake.nixosModules.hyprland =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       programs.hyprland = {
         enable = true;
@@ -17,7 +17,7 @@
         hyprshot
       ];
 
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         wayland.windowManager.hyprland = {
           enable = true;
 
@@ -175,8 +175,8 @@
         };
 
         xdg.configFile."hypr/hyprpaper.conf".text = ''
-          preload = /home/unknown/Pictures/wallpaper/dark-background-abstract.png
-          wallpaper = HDMI-A-2, /home/unknown/Pictures/wallpaper/dark-background-abstract.png
+          preload = /home/${config.myConfig.user.name}/Pictures/wallpaper/dark-background-abstract.png
+          wallpaper = HDMI-A-2, /home/${config.myConfig.user.name}/Pictures/wallpaper/dark-background-abstract.png
         '';
       };
     };

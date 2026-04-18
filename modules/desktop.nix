@@ -1,7 +1,7 @@
 { inputs, self, ... }:
 {
   flake.nixosModules.desktop =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       nix.settings.experimental-features = [
         "nix-command"
@@ -46,9 +46,9 @@
       };
 
       # Define a user account. Don't forget to set a password with ‘passwd’
-      users.users.unknown = {
+      users.users.${config.myConfig.user.name} = {
         isNormalUser = true;
-        description = "unknown";
+        description = config.myConfig.user.name;
         shell = pkgs.zsh;
         extraGroups = [
           "networkmanager"
@@ -62,6 +62,7 @@
     system = "x86_64-linux";
     modules = [
       ../hardware-configuration.nix
+      self.nixosModules.user
       self.nixosModules.desktop
       self.nixosModules.services
       self.nixosModules.home

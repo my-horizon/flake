@@ -1,9 +1,9 @@
 { ... }:
 {
   flake.nixosModules.thunderbird =
-    { ... }:
+    { config, ... }:
     {
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         programs.thunderbird = {
           enable = true;
 

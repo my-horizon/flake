@@ -1,7 +1,7 @@
 { inputs, ... }:
 {
   flake.nixosModules.home =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     {
       imports = [ inputs.home-manager.nixosModules.home-manager ];
 
@@ -9,7 +9,7 @@
         useGlobalPkgs = true;
         useUserPackages = true;
 
-        users.unknown = {
+        users.${config.myConfig.user.name} = {
           home.stateVersion = "25.11";
           programs.home-manager.enable = true;
           imports = [ inputs.catppuccin.homeModules.catppuccin ];

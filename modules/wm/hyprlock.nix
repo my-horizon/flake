@@ -1,10 +1,10 @@
 { ... }:
 {
   flake.nixosModules.hyprlock =
-    { ... }:
+    { config, ... }:
     {
       security.pam.services.hyprlock = { };
-      home-manager.users.unknown = {
+      home-manager.users.${config.myConfig.user.name} = {
         programs.hyprlock = {
           enable = true;
 
