@@ -21,7 +21,6 @@
         # college
         study = pkgs.mkShell {
           packages = with pkgs; [
-            racket
           ];
         };
 
