@@ -12,7 +12,7 @@
         unzip
         cifs-utils
         evince
-        kdePackages.okular
+        pdfarranger
         libreoffice-still
         hyphenDicts.de_DE
         grim
