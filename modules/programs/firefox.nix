@@ -182,6 +182,10 @@
                       name = "akad";
                       url = "https://akad-campus.de";
                     }
+                    {
+                      name = "youtube";
+                      url = "https://youtube.com";
+                    }
                   ];
                 }
               ];
