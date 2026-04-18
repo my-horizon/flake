@@ -175,8 +175,8 @@
         };
 
         xdg.configFile."hypr/hyprpaper.conf".text = ''
-          preload = /home/${config.myConfig.user.name}/Pictures/wallpaper/dark-background-abstract.png
-          wallpaper = HDMI-A-2, /home/${config.myConfig.user.name}/Pictures/wallpaper/dark-background-abstract.png
+          preload = ${./assets/wallpaper.png}
+          wallpaper = HDMI-A-2, ${./assets/wallpaper.png}
         '';
       };
     };
