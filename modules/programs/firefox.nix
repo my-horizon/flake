@@ -156,27 +156,31 @@
                     }
                     {
                       name = "gateway";
-                      url = "https://192.168.1.1";
+                      url = "https://gateway.home.virtualhole.de";
                     }
                     {
                       name = "nas";
-                      url = "http://192.168.10.150:5000";
+                      url = "http://nas.home.virtualhole.de";
                     }
                     {
                       name = "portainer";
-                      url = "http://192.168.10.150:8080";
+                      url = "http://portainer.home.virtualhole.de";
                     }
                     {
                       name = "adguard";
-                      url = "http://192.168.10.150:8081";
+                      url = "http://adguardhome.home.virtualhole.de";
                     }
                     {
                       name = "nextcloud";
-                      url = "http://192.168.10.150:8180";
+                      url = "http://nextcloud.home.virtualhole.de";
                     }
                     {
                       name = "immich";
-                      url = "http://192.168.10.150:8181";
+                      url = "http://immich.home.virtualhole.de";
+                    }
+                    {
+                      name = "jellyfin";
+                      url = "http://jellyfin.home.virtualhole.de";
                     }
                     {
                       name = "akad";
