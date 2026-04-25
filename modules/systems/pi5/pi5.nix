@@ -56,6 +56,7 @@
         extraGroups = [
           "wheel"
         ];
+        initialPassword = "722772";
         openssh.authorizedKeys.keys = [
           "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGUsRfD2xqsTb1zobM1jKoOqAIbZMwqVwAZQ8SQH+0Y9 mail@virtualhorizon.de"
         ];
