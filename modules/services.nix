@@ -22,7 +22,7 @@
       };
 
       fileSystems."/mnt/data" = {
-        device = "//192.168.10.50/data";
+        device = "//192.168.30.50/data";
         fsType = "cifs";
         options = [
           "credentials=/home/unknown/.cifs-credentials"
