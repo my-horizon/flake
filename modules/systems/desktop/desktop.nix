@@ -20,6 +20,9 @@
       # for makemkv
       boot.kernelModules = [ "sg" ];
 
+      # temporary
+      boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
       # active shell
       programs.zsh.enable = true;
 
