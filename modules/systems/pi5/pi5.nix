@@ -14,6 +14,11 @@
           "flakes"
         ];
 
+        trusted-users = [
+          "root"
+          "@wheel"
+        ];
+
         substituters = [
           "https://nixos-raspberrypi.cachix.org"
         ];
