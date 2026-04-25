@@ -6,7 +6,7 @@
       options.myConfig.user = {
         name = lib.mkOption {
           type = lib.types.str;
-          default = "unknown";
+          default = "user";
           description = "primary user name";
         };
 
