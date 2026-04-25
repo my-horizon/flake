@@ -1,6 +1,6 @@
 { inputs, self, ... }:
 {
-  flake.nixosConfigurations.pi5 = inputs.nixos-raspberrypi.lib.nixosSystems {
+  flake.nixosConfigurations.pi5 = inputs.nixos-raspberrypi.lib.nixosSystem {
     system = "aarch64-linux";
     specialArgs = { inherit inputs; };
     modules = [
