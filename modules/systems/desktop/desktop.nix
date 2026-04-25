@@ -3,10 +3,12 @@
   flake.nixosModules.desktop =
     { pkgs, config, ... }:
     {
-      nix.settings.experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
+      nix.settings = {
+        experimental-features = [
+          "nix-command"
+          "flakes"
+        ];
+      };
 
       # Bootloader
       boot.loader.systemd-boot.enable = true;
@@ -55,6 +57,7 @@
           "wheel"
         ];
       };
+
       system.stateVersion = "25.11";
     };
 }

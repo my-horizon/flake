@@ -17,10 +17,6 @@
         games.enable = false;
       };
 
-      services.openssh = {
-        enable = true;
-      };
-
       fileSystems."/mnt/data" = {
         device = "//192.168.30.50/data";
         fsType = "cifs";
