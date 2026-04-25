@@ -16,7 +16,6 @@
             # nixos
             update = "nix flake update";
             rebuild = "sudo nixos-rebuild switch --flake .#desktop";
-            check = "nixos-rebuild build --flake .#desktop";
             garbage = "sudo nix-collect-garbage -d";
 
             # git
