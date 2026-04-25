@@ -156,31 +156,31 @@
                     }
                     {
                       name = "gateway";
-                      url = "https://gateway.home.virtualhole.de";
+                      url = "https://gateway.homelab.virtualhole.de";
                     }
                     {
                       name = "nas";
-                      url = "http://nas.home.virtualhole.de";
+                      url = "http://nas.homelab.virtualhole.de";
                     }
                     {
                       name = "portainer";
-                      url = "http://portainer.home.virtualhole.de";
+                      url = "http://portainer.homelab.virtualhole.de";
                     }
                     {
                       name = "adguard";
-                      url = "http://adguardhome.home.virtualhole.de";
+                      url = "http://adguardhome.homelab.virtualhole.de";
                     }
                     {
                       name = "nextcloud";
-                      url = "http://nextcloud.home.virtualhole.de";
+                      url = "http://nextcloud.homelab.virtualhole.de";
                     }
                     {
                       name = "immich";
-                      url = "http://immich.home.virtualhole.de";
+                      url = "http://immich.homelab.virtualhole.de";
                     }
                     {
                       name = "jellyfin";
-                      url = "http://jellyfin.home.virtualhole.de";
+                      url = "http://jellyfin.homelab.virtualhole.de";
                     }
                     {
                       name = "akad";

@@ -18,12 +18,6 @@
           ];
         };
 
-        # college
-        study = pkgs.mkShell {
-          packages = with pkgs; [
-          ];
-        };
-
         # movie ripping
         movie = unfreePkgs.mkShell {
           packages = with unfreePkgs; [
