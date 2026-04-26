@@ -3,7 +3,9 @@
   flake.nixosModules.thunderbird =
     { config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.thunderbird = {
           enable = true;
 
@@ -47,6 +49,7 @@
           };
         };
 
+        # colortheme
         catppuccin.thunderbird = {
           enable = false;
         };

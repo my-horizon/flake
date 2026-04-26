@@ -3,7 +3,9 @@
   flake.nixosModules.waybar =
     { pkgs, config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.waybar = {
           enable = true;
 
@@ -144,6 +146,7 @@
           '';
         };
 
+        # colortheme
         catppuccin.waybar = {
           enable = false;
         };

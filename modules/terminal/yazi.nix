@@ -3,7 +3,9 @@
   flake.nixosModules.yazi =
     { pkgs, config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.yazi = {
           enable = true;
           enableZshIntegration = true;
@@ -17,6 +19,7 @@
           '';
 
           settings = {
+
             mgr = {
               show_hidden = false;
               sort_by = "natural";
@@ -25,7 +28,9 @@
               sort_reverse = false;
               linemode = "none";
             };
+
             plugin = {
+
               prepend_fetchers = [
                 {
                   id = "git";
@@ -42,6 +47,7 @@
           };
 
           keymap = {
+
             mgr.prepend_keymap = [
               {
                 on = [ "h" ];

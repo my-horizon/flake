@@ -3,10 +3,12 @@
   flake.nixosModules.user =
     { config, lib, ... }:
     {
+
       options.myConfig.user = {
+
         name = lib.mkOption {
           type = lib.types.str;
-          default = "user";
+          default = "unknown";
           description = "primary user name";
         };
 

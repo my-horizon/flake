@@ -3,9 +3,10 @@
   flake.nixosModules.zsh =
     { config, ... }:
     {
-      home-manager.users.${config.myConfig.user.name} = {
-        programs.zsh = {
 
+      home-manager.users.${config.myConfig.user.name} = {
+
+        programs.zsh = {
           enable = true;
           enableCompletion = true;
           autosuggestion.enable = true;

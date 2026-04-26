@@ -3,16 +3,20 @@
   flake.nixosModules.firefox =
     { config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.firefox = {
           enable = true;
 
           profiles.default = {
             isDefault = true;
 
+            # search engine
             search = {
               default = "ddg";
               force = true;
+
               engines = {
                 "google".metaData.hidden = true;
                 "bing".metaData.hidden = true;
@@ -132,6 +136,7 @@
               "network.trr.mode" = 5;
             };
 
+            # default extensions
             extensions.packages = with inputs.nur.legacyPackages.x86_64-linux.repos.rycee.firefox-addons; [
               bitwarden
               vimium
@@ -139,12 +144,17 @@
               catppuccin-mocha-mauve
             ];
 
+            # default bookmarks
             bookmarks = {
               force = true;
+
               settings = [
                 {
+
+                  # set bookmarks in toolbar
                   name = "Toolbar";
                   toolbar = true;
+
                   bookmarks = [
                     {
                       name = "claude";
@@ -197,6 +207,7 @@
           };
         };
 
+        # colortheme
         catppuccin.firefox = {
           enable = false;
         };

@@ -3,9 +3,12 @@
   flake.nixosModules.ghostty =
     { config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.ghostty = {
           enable = true;
+
           settings = {
 
             # terminal

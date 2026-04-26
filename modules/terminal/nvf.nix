@@ -3,6 +3,7 @@
   flake.nixosModules.nvf =
     { config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
         imports = [ inputs.nvf.homeManagerModules.default ];
 
@@ -11,6 +12,7 @@
 
           settings = {
 
+            # visual guidance
             vim.visuals.indent-blankline.enable = true;
             vim.statusline.lualine.enable = true;
 
@@ -86,14 +88,19 @@
             vim.filetree.nvimTree.enable = true;
             vim.filetree.nvimTree.mappings.toggle = "<leader>e";
             vim.filetree.nvimTree.mappings.focus = "<leader>s";
+
             vim.filetree.nvimTree.setupOpts = {
+
               git = {
                 enable = true;
               };
+
               renderer = {
                 highlight_git = true;
+
                 icons = {
                   git_placement = "before";
+
                   show = {
                     git = true;
                   };

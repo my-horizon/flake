@@ -3,6 +3,7 @@
   flake.nixosModules.programs =
     { pkgs, ... }:
     {
+
       # Install the following packages
       environment.systemPackages = with pkgs; [
         networkmanagerapplet

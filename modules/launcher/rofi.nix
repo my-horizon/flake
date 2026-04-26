@@ -3,7 +3,9 @@
   flake.nixosModules.rofi =
     { pkgs, config, ... }:
     {
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.rofi = {
           enable = true;
           terminal = "ghostty";
@@ -18,6 +20,7 @@
           };
         };
 
+        # colortheme
         catppuccin.rofi = {
           enable = false;
         };

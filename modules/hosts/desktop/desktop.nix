@@ -1,7 +1,9 @@
 { inputs, self, ... }:
 {
+
   flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
+
     modules = [
       ../../../hardware/desktop/desktop-hardware.nix
       self.nixosModules.user

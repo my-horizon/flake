@@ -3,6 +3,7 @@
   flake.nixosModules.hyprland =
     { pkgs, config, ... }:
     {
+
       programs.hyprland = {
         enable = true;
       };
@@ -18,6 +19,7 @@
       ];
 
       home-manager.users.${config.myConfig.user.name} = {
+
         wayland.windowManager.hyprland = {
           enable = true;
 
@@ -37,16 +39,11 @@
             general = {
               gaps_in = 5;
               gaps_out = 10;
-
               border_size = 3;
-
               "col.active_border" = "$lavender";
               "col.inactive_border" = "$crust";
-
               resize_on_border = false;
-
               allow_tearing = false;
-
               layout = "dwindle";
             };
 
@@ -54,7 +51,6 @@
             decoration = {
               rounding = 10;
               rounding_power = 3;
-
               active_opacity = 1.0;
               inactive_opacity = 0.9;
               fullscreen_opacity = 1.0;
@@ -170,6 +166,7 @@
           };
         };
 
+        # colortheme
         catppuccin.hyprland = {
           enable = true;
         };

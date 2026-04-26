@@ -4,7 +4,9 @@
     { config, ... }:
     {
       security.pam.services.hyprlock = { };
+
       home-manager.users.${config.myConfig.user.name} = {
+
         programs.hyprlock = {
           enable = true;
 
@@ -33,6 +35,7 @@
           };
         };
 
+        # colortheme
         catppuccin.hyprlock = {
           enable = false;
         };
